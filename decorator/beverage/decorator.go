@@ -11,11 +11,11 @@ type Mocha struct {
 	Beverage Beverage
 }
 
-func (m Mocha) Description() string {
+func (m *Mocha) Description() string {
 	return "モカ" + m.Beverage.Description()
 }
 
-func (m Mocha) Cost() float64 {
+func (m *Mocha) Cost() float64 {
 	return m.Beverage.Cost() + 0.20
 }
 
@@ -24,10 +24,10 @@ type Soy struct {
 	Beverage Beverage
 }
 
-func (s Soy) Description() string {
+func (s *Soy) Description() string {
 	return "豆乳" + s.Beverage.Description()
 }
 
-func (s Soy) Cost() float64 {
+func (s *Soy) Cost() float64 {
 	return s.Beverage.Cost() + 0.15
 }

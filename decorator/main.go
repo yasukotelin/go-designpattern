@@ -9,17 +9,17 @@ import (
 func main() {
 
 	// No decoration
-	espresso := beverage.Espresso{}
+	espresso := &beverage.Espresso{}
 	printBeverage(espresso)
 
 	// Decoration
-	mochaEspresso := beverage.Mocha{
+	mochaEspresso := &beverage.Mocha{
 		Beverage: espresso,
 	}
 	printBeverage(mochaEspresso)
 
 	// More decoration
-	soyMochaEspresso := beverage.Soy{
+	soyMochaEspresso := &beverage.Soy{
 		Beverage: mochaEspresso,
 	}
 	printBeverage(soyMochaEspresso)
